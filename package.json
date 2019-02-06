@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "NODE_ENV=development yarn nodemon src/server/server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node src/server/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9"
+  }
+}
