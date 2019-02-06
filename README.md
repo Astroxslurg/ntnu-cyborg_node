@@ -13,3 +13,10 @@ yarn dev
 ```
 
 ```
+
+You might have to
+```
+yarn add next
+yarn add react
+yarn add react-dom
+```
