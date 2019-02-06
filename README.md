@@ -1,7 +1,15 @@
 Webserver repository for EiT project for NTNU Cyborg
 
-To start, type:
+Start by installing packages:
 
 ```
+yarn
+```
+
+To start, type:
+
 yarn dev
+
+```
+
 ```
