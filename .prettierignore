@@ -1,0 +1,8 @@
+.coverage
+.next
+static
+styles
+*.json
+*.snap
+node_modules
+config/i18n.js
