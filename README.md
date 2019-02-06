@@ -11,3 +11,6 @@ To start, type:
 ```
 yarn dev
 ```
+
+
+["Backend"](https://github.com/HerSta/NTNU-cyborg_backend)
