@@ -1,10 +1,31 @@
-import React from "react";
-import Test from "../components/test";
+import React, { Component } from 'react';
+import Test from '../components/test';
+import Api from '../src/api-client';
 
-const str = "variables";
+class ApiTest extends Component {
+  constructor() {
+    super();
+    this.state = {
+      hello: {
+        id: -1,
+        content: ' ',
+      },
+    };
+  }
 
-const textTest = `text that can contain ${str}`;
+  async componentDidMount() {
+    const result = await Api.fetchHello();
+    this.setState({ hello: result });
+  }
 
-const ApiTest = () => <Test title="Title test" text={textTest} />;
+  render() {
+    return (
+      <div>
+        <h6>{this.state.hello.id}</h6>
+        <p>{this.state.hello.content}</p>
+      </div>
+    );
+  }
+}
 
 export default ApiTest;

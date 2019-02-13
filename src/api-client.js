@@ -1,10 +1,10 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-const fetch = require("isomorphic-fetch");
-const baseUrl = process.env.BASE_URL;
+const fetch = require('isomorphic-fetch');
+const baseUrl = process.env.BASE_URL || 'http://localhost:8080/';
 
 if (!baseUrl) {
   console.log(
-    "No base URL found\nPlease set the BASE_URL environment variable"
+    'No base URL found\nPlease set the BASE_URL environment variable'
   );
 }
 
@@ -13,52 +13,26 @@ class Api {
     GENERAL HTTP METHODS
     ********************/
 
-  async fetchHello() {
-    return this.fetchJson(`${baseUrl}hello`);
-  }
-
-  async updateJson(path, object) {
-    const authHeader = this.getAuthHeader();
-    const result = await fetch(path, {
-      method: "PUT",
-      body: JSON.stringify(object),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
-
-    return result;
+  // Hello world request
+  async fetchHello(callback) {
+    return await this.fetchJson(`${baseUrl}greeting`);
   }
 
   async fetchJson(path) {
-    const authHeader = this.getAuthHeader();
-
     const result = await fetch(path, {
-      method: "GET",
+      method: 'GET',
       headers: {
-        Authorization: authHeader
-      }
+        Accept: 'application/json',
+      },
     });
+    if (result.ok) {
+      return await result.json();
+    }
 
-    return result;
-  }
-
-  async deleteJson(path) {
-    const authHeader = this.getAuthHeader();
-    return await fetch(path, {
-      method: "DELETE",
-      headers: {
-        Authorization: authHeader
-      }
-    })
-      .then(response => {
-        console.log("request succeeded with JSON response: ", response);
-        return response;
-      })
-      .catch(err => {
-        console.log("request failed: ", err);
-        return err;
-      });
+    const err = new Error(
+      `unable to fetch ${path}. ${result.status} ${result.statusText}`
+    );
+    throw err;
   }
 }
 
