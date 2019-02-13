@@ -1,6 +1,6 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 const fetch = require('isomorphic-fetch');
-const baseUrl = process.env.BASE_URL || 'http://localhost:8080/';
+const baseUrl = process.env.BASE_URL || 'http://localhost:8080';
 
 if (!baseUrl) {
   console.log(
@@ -9,13 +9,9 @@ if (!baseUrl) {
 }
 
 class Api {
-  /*******************
-    GENERAL HTTP METHODS
-    ********************/
-
   // Hello world request
   async fetchHello(callback) {
-    return await this.fetchJson(`${baseUrl}greeting`);
+    return await this.fetchJson(`${baseUrl}/greeting`);
   }
 
   async fetchJson(path) {

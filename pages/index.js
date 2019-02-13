@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Index = () => (
+const Index = ({ state }) => (
   <div>
     <h1>Welcome</h1>
     <p>This is text</p>
@@ -8,7 +8,6 @@ const Index = () => (
     <p>This is image</p>
     <h2>This is a header written hekk yeh</h2>
     <a href="testtest">testtest</a>
-
   </div>
 );
 
