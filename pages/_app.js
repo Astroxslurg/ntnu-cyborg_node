@@ -7,7 +7,7 @@ export default class MyApp extends App {
     super();
     this.state = {
       hello: {
-        id: -1,
+        id: '',
         content: ' ',
       },
     };
