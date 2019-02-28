@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Index = ({ state }) => (
   <div>
     <h1>Welcome</h1>

@@ -1,11 +1,12 @@
 
-import React from "react";
+import React from 'react';
+//import NoSSR from 'react-no-ssr';
+import dynamic from 'next/dynamic'
 
-const Testtest = () => (
-  <div>
-    <h1>Offical Testing Portal</h1>
-    <h2>Test yeaaaah!</h2>
-  </div>
-);
+const DynamicPlot = dynamic(import('../components/plot'), {
+    ssr: false
+})
 
-export default Testtest;
+
+
+export default DynamicPlot;
