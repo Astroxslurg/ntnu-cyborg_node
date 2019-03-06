@@ -1,4 +1,5 @@
 import React from 'react';
+import Visualisation from '../components/visualisation';
 
 const Index = ({ state }) => (
   <div>
@@ -8,6 +9,7 @@ const Index = ({ state }) => (
     <p>This is image</p>
     <h2>This is a header written hekk yeh</h2>
     <a href="testtest">testtest</a>
+    <Visualisation />
   </div>
 );
 
