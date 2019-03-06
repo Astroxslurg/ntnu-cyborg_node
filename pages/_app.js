@@ -1,6 +1,7 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import Api from '../src/api-client';
+import NavbarTop from '../components/navbar';
 
 export default class MyApp extends App {
   constructor() {
@@ -32,6 +33,7 @@ export default class MyApp extends App {
 
     return (
       <Container>
+          <NavbarTop/>
           <Component state={this.state} {...pageProps} />
       </Container>
     );
