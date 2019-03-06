@@ -36,11 +36,7 @@ const DynamicPlot = dynamic(import('../components/plot'), {
 
 const Index = ({ state }) => (
   <div>
-
-      <MyNavbar />
-    <p>visualisering, om oss, prosjektet/ntnu cyborg, andre prosjekter</p>
-    <a href="testtest">testtest</a>
-
+    <MyNavbar />
     <DynamicPlot/>
   </div>
 );

@@ -7,22 +7,13 @@ class Testtest extends React.Component {
     constructor() {
       super();
       this.state = {
-          sensordata: null,
-          ys: []
+          sensordata: null
       };
     }
     async componentDidMount() {
         const result = await Api.fetchSensorData();
         this.setState({sensordata: result});
-        //this.setState({ys: result.resultList});
-        //this.setState({zs: result.resultList});
-
-        for (let i = 0; i <= result.resultList.length; i++){
-            this.state.ys.push(i);
-            //this.state.zs.push(1);
-        }
-
-        console.log(this.state.sensordata.resultList);
+        console.log(this.state.sensordata);
     }
 
    render() {
@@ -35,14 +26,40 @@ class Testtest extends React.Component {
                data={[
                    {
                        y: this.state.sensordata.resultList,
-                       x: this.state.ys,
+                       x: this.state.sensordata.timestampList,
                        type: 'scatter',
                        mode: 'lines+points',
                        marker: {color: 'red'},
                    },
                    {type: 'scatter'},
                ]}
-               layout={{width: 1200, height: 800, title: 'A Fancy Plot'}}
+               layout={
+                   {
+                       width: 1200,
+                       height: 800,
+                       title: 'A Fancy Plot',
+                       xaxis: {
+                           title: {
+                               text: this.state.sensordata.tUnit,
+                               font: {
+                                   family: 'Courier New, monospace',
+                                   size: 18,
+                                   color: '#7f7f7f'
+                               }
+                           },
+                       },
+                       yaxis: {
+                           title: {
+                               text: this.state.sensordata.vUnit,
+                               font: {
+                                   family: 'Courier New, monospace',
+                                   size: 18,
+                                   color: '#7f7f7f'
+                               }
+                           }
+                       }
+                   }
+               }
            />
        );
    }
