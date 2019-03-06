@@ -1,53 +1,48 @@
 
 
-
 import Plot from 'react-plotly.js';
-
-
 import Api from '../src/api-client';
 
-
-
-
 class Testtest extends React.Component {
- constructor() {
-    super();
-    this.state = {
-      data: null
+    constructor() {
+      super();
+      this.state = {
+          sensordata: null,
+          ys: [],
+          zs: []
+      };
+    }
+    async componentDidMount() {
+        const result = await Api.fetchSensorData();
+        this.setState({sensordata: result});
+        //this.setState({ys: result.resultList});
+        //this.setState({zs: result.resultList});
 
-    };
-  }
-    componentDidMount() {
-        fetch('http://localhost:8080/sensordata')
-            .then(response => response.json())
-            .then(data => this.setState({ data }));
+        for (let i = 0; i <= result.resultList.length; i++){
+            this.state.ys.push(i);
+            this.state.zs.push(1);
+        }
 
-        console.log(this.state.data);
+        console.log(this.state.sensordata.resultList);
     }
 
-
    render() {
-       //const result = Api.fetchSensorData();
-       //this.setState({ sensordata: result });
-
-
-       //console.log(result.then(response => response.json())
-       //    .then(data => this.setState({ data });
-
-       console.log(this.state.data);
-       console.log("hei jeg lever");
+        console.log(this.state);
+        if (!this.state.sensordata){
+            return <div></div>
+        }
        return (
            <Plot
                data={[
                    {
-                       x: [1, 2, 3],
-                       y: [2, 6, 3],
-                       z: [3,5,1],
+                       x: this.state.sensordata.resultList,
+                       y: this.state.ys,
+                       z: this.state.zs,
                        type: 'scatter3d',
                        mode: 'lines+points',
                        marker: {color: 'red'},
                    },
-                   {type: 'scatter3d', x: [1, 2, 3], y: [2, 5, 3]},
+                   {type: 'scatter3d'},
                ]}
                layout={{width: 1200, height: 800, title: 'A Fancy Plot'}}
            />

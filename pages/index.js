@@ -2,6 +2,7 @@ import React from 'react';
 import {Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import dynamic from 'next/dynamic'
 
 
 
@@ -29,19 +30,18 @@ const MyNavbar = ({state}) => (
       </Navbar>
     </div>
 );
-
+const DynamicPlot = dynamic(import('../components/plot'), {
+    ssr: false
+})
 
 const Index = ({ state }) => (
   <div>
 
       <MyNavbar />
     <p>visualisering, om oss, prosjektet/ntnu cyborg, andre prosjekter</p>
-    <img src="http://images5.fanpop.com/image/photos/31000000/haters-gonna-hate-random-31076705-550-413.jpg" />
-    <p>This is image</p>
-    <h2>This is a header written hekk yeh</h2>
     <a href="testtest">testtest</a>
 
-
+    <DynamicPlot/>
   </div>
 );
 
