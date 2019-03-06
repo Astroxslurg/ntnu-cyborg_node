@@ -28,7 +28,6 @@ export default class MyApp extends App {
   }
 
   render() {
-    console.log(process.browser);
     const { Component, pageProps } = this.props;
 
     return (

@@ -3,8 +3,39 @@
 
 import Plot from 'react-plotly.js';
 
+
+import Api from '../src/api-client';
+
+
+
+
 class Testtest extends React.Component {
+ constructor() {
+    super();
+    this.state = {
+      data: null
+
+    };
+  }
+    componentDidMount() {
+        fetch('http://localhost:8080/sensordata')
+            .then(response => response.json())
+            .then(data => this.setState({ data }));
+
+        console.log(this.state.data);
+    }
+
+
    render() {
+       //const result = Api.fetchSensorData();
+       //this.setState({ sensordata: result });
+
+
+       //console.log(result.then(response => response.json())
+       //    .then(data => this.setState({ data });
+
+       console.log(this.state.data);
+       console.log("hei jeg lever");
        return (
            <Plot
                data={[

@@ -14,6 +14,9 @@ const MyNavbar = ({state}) => (
               <Nav className="mr-auto">
                   <Nav.Link href="#home">Home</Nav.Link>
                   <Nav.Link href="#link">NTNU Cyborg</Nav.Link>
+                  <Nav.Link href="#link">Meet The Team</Nav.Link>
+                  <Nav.Link href="about">About</Nav.Link>
+                  <Nav.Link href="#link">Other Projects</Nav.Link>
                   <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                       <NavDropdown.Item href="testtest">Testtest</NavDropdown.Item>
                       <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
