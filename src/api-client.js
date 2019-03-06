@@ -1,6 +1,6 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-const fetch = require('isomorphic-fetch');
 const baseUrl = process.env.BASE_URL || 'http://localhost:8080';
+import fetch from 'isomorphic-fetch'
 
 if (!baseUrl) {
   console.log(

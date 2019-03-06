@@ -9,10 +9,11 @@ export default class MyApp extends App {
     this.state = {
       hello: {
         id: '',
-        content: ' ',
+        content: '',
       },
     };
   }
+
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
