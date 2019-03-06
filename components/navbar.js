@@ -9,7 +9,7 @@ const NavbarTop = ({state}) => (
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="carouseltest">Home</Nav.Link>
                     <Nav.Link href="#link">NTNU Cyborg</Nav.Link>
                     <Nav.Link href="#link">Meet The Team</Nav.Link>
                     <Nav.Link href="about">About</Nav.Link>
