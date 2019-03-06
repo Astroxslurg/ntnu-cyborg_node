@@ -1,7 +1,6 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import Api from '../src/api-client';
-import NoSSR from 'react-no-ssr';
 
 export default class MyApp extends App {
   constructor() {
@@ -34,9 +33,7 @@ export default class MyApp extends App {
 
     return (
       <Container>
-        <NoSSR>
           <Component state={this.state} {...pageProps} />
-        </NoSSR>
       </Container>
     );
   }
