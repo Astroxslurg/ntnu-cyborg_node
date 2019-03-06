@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "cross-env NODE_ENV=development yarn nodemon src/server/server.js",
+    "dev": "cross-env NODE_ENV=development yarn nodemon next src/server/server.js",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node src/server/server.js"
   },
