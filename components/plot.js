@@ -8,8 +8,7 @@ class Testtest extends React.Component {
       super();
       this.state = {
           sensordata: null,
-          ys: [],
-          zs: []
+          ys: []
       };
     }
     async componentDidMount() {
@@ -20,7 +19,7 @@ class Testtest extends React.Component {
 
         for (let i = 0; i <= result.resultList.length; i++){
             this.state.ys.push(i);
-            this.state.zs.push(1);
+            //this.state.zs.push(1);
         }
 
         console.log(this.state.sensordata.resultList);
@@ -35,14 +34,13 @@ class Testtest extends React.Component {
            <Plot
                data={[
                    {
-                       x: this.state.sensordata.resultList,
-                       y: this.state.ys,
-                       z: this.state.zs,
-                       type: 'scatter3d',
+                       y: this.state.sensordata.resultList,
+                       x: this.state.ys,
+                       type: 'scatter',
                        mode: 'lines+points',
                        marker: {color: 'red'},
                    },
-                   {type: 'scatter3d'},
+                   {type: 'scatter'},
                ]}
                layout={{width: 1200, height: 800, title: 'A Fancy Plot'}}
            />
