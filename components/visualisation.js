@@ -2,6 +2,28 @@ import React, { Component } from 'react';
 import Test from '../components/test';
 import Api from '../src/api-client';
 
+const getGradient = currentColor => {
+  const r = parseInt(currentColor[1].concat(currentColor[2]));
+  const g = parseInt(currentColor[3].concat(currentColor[4]));
+  const b = parseInt(currentColor[5].concat(currentColor[6]));
+};
+
+const draw = (arr, index, color, seqOfSameColor, seq) => {
+  color = (parseInt(color[1].concat(color[2]), 16) + 15).toString(16);
+  ctx.strokeStyle = color;
+
+  const reverter = Math.PI ? dataList[i] < 0 : 0;
+  ctx.beginPath();
+  ctx.arc(
+    250,
+    250,
+    Math.abs(dataList[i]) * multiplier,
+    i * increment + reverter,
+    (i + 1) * increment + reverter
+  );
+  ctx.stroke();
+};
+
 class Visualisation extends Component {
   constructor() {
     super();
@@ -19,10 +41,13 @@ class Visualisation extends Component {
     const ctx = canvas.getContext('2d');
 
     const size = this.state.canvasSize;
-    const color = '#72c036';
-    const otherColor = '#c92e67';
+    // const color = '#72c036';
+    // const otherColor = '#c92e67';
+    // const color = '#00d026';
+    // const otherColor = '#d90097';
     const dataList = this.state.sensordata.resultList;
     const increment = (2 * Math.PI) / dataList.length;
+    const seqOfSameColor = Math.floor(dataList.length / 768);
 
     const radius = size / 2;
 
@@ -35,22 +60,21 @@ class Visualisation extends Component {
     const startCords = [radius, radius];
     const endCords = [radius, radius];
     const endRadius = 120;
-
-    const gradient = ctx.createRadialGradient(
-      startCords[0],
-      startCords[1],
-      0,
-      endCords[0],
-      endCords[1],
-      endRadius
-    );
-    gradient.addColorStop(1, color);
-    gradient.addColorStop(0, otherColor);
+    //
+    // const gradient = ctx.createRadialGradient(
+    //   startCords[0],
+    //   startCords[1],
+    //   0,
+    //   endCords[0],
+    //   endCords[1],
+    //   endRadius
+    // );
+    // gradient.addColorStop(1, color);
+    // gradient.addColorStop(0, otherColor);
 
     // Fill with gradient
     // ctx.fillStyle = gradient;
     // ctx.fillRect(0, 0, size, size);
-    ctx.strokeStyle = gradient;
 
     ctx.lineWidth = 6;
     ctx.lineCap = 'round';
@@ -59,7 +83,12 @@ class Visualisation extends Component {
     // console.log(increment);
     // console.log(dataList);
 
+    let color = '#000000';
+
     for (let i = 0; i < dataList.length; i++) {
+      color = (parseInt(color[1].concat(color[2]), 16) + 15).toString(16);
+      ctx.strokeStyle = color;
+
       const reverter = Math.PI ? dataList[i] < 0 : 0;
       ctx.beginPath();
       ctx.arc(
