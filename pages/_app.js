@@ -2,6 +2,7 @@ import React from 'react';
 import App, { Container } from 'next/app';
 import Api from '../src/api-client';
 import NavbarTop from '../components/navbar';
+import { Column, Row } from 'simple-flexbox';
 
 export default class MyApp extends App {
   constructor() {
@@ -34,22 +35,34 @@ export default class MyApp extends App {
 
     return (
       <Container>
-        <Column flexGrow={1}>
-          <Row vertical="center">
+        <Row horizontal="center">
+          <Column flexGrow={1}>
             <NavbarTop />
-          </Row>
-          <Row vertical="center">
-            <Column flexGrow={1} horizontal="center" />
-            <Column flexGrow={1} horizontal="center">
-              <DynamicPlot />
-            </Column>
-            <Column flexGrow={1} horizontal="center">
-              <span>Explanation of stuff </span>
-            </Column>
-            <Column flexGrow={1} horizontal="center" />
-          </Row>
-        </Column>
-        <Component state={this.state} {...pageProps} />
+          </Column>
+        </Row>
+        <Row vertical="center">
+          <Column flexGrow={1} horizontal="center">
+            <h3> Column 1 </h3>
+            <span> column 1 content </span>
+          </Column>
+          <Column flexGrow={1} horizontal="center">
+            <h3> Column 2 </h3>
+            <span> column 2 content </span>
+          </Column>
+          <Column flexGrow={1} horizontal="center">
+            <h3> Column 1 </h3>
+            <span> column 1 content </span>
+            <Component state={this.state} {...pageProps} />
+          </Column>
+          <Column flexGrow={1} horizontal="center">
+            <h3> Column 2 </h3>
+            <span> column 2 content </span>
+          </Column>
+          <Column flexGrow={1} horizontal="center">
+            <h3> Column 2 </h3>
+            <span> column 2 content </span>
+          </Column>
+        </Row>
       </Container>
     );
   }
