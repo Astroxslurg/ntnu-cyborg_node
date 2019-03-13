@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const About = ({ state }) => (
-  <div>
-    <h1>About</h1>
-    <p>Hello</p>
-  </div>
-);
+class About extends Component {
+  render() {
+    return (
+      <div>
+        <h1
+          style={{
+            backgroundColor: 'blue',
+          }}>
+          About
+        </h1>
+        <p>Hello</p>
+      </div>
+    );
+  }
+}
 
 export default About;
