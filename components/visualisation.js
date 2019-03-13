@@ -18,15 +18,23 @@ class Visualisation extends Component {
     const canvas = this.refs.canvas;
     const ctx = canvas.getContext('2d');
 
-    // Create gradient
-    // var grd = ctx.createLinearGradient(0, 0, 500, 0);
-    // grd.addColorStop(0, 'red');
-    // grd.addColorStop(1, 'white');
+    const size = this.state.canvasSize;
+    const color = '#72c036';
+    const otherColor = '#c92e67';
+    const dataList = this.state.sensordata.resultList;
+    const increment = (2 * Math.PI) / dataList.length;
 
-    const radius = this.state.canvasSize / 2;
+    const radius = size / 2;
+
+    const maxVal = Math.max(
+      Math.abs(Math.min(...dataList)),
+      Math.max(...dataList)
+    );
+    const multiplier = radius / maxVal;
+
     const startCords = [radius, radius];
     const endCords = [radius, radius];
-    const endRadius = radius;
+    const endRadius = 120;
 
     const gradient = ctx.createRadialGradient(
       startCords[0],
@@ -36,19 +44,33 @@ class Visualisation extends Component {
       endCords[1],
       endRadius
     );
-    gradient.addColorStop(0, 'red');
-    gradient.addColorStop(1, 'white');
+    gradient.addColorStop(1, color);
+    gradient.addColorStop(0, otherColor);
 
     // Fill with gradient
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, 500, 500);
+    // ctx.fillStyle = gradient;
+    // ctx.fillRect(0, 0, size, size);
+    ctx.strokeStyle = gradient;
 
     ctx.lineWidth = 6;
     ctx.lineCap = 'round';
+    // ctx.strokeStyle = color;
 
-    // ctx.beginPath();
-    // ctx.arc(250, 250, 200, 0.3, Math.PI - 0.3);
-    // ctx.stroke();
+    // console.log(increment);
+    // console.log(dataList);
+
+    for (let i = 0; i < dataList.length; i++) {
+      const reverter = Math.PI ? dataList[i] < 0 : 0;
+      ctx.beginPath();
+      ctx.arc(
+        250,
+        250,
+        Math.abs(dataList[i]) * multiplier,
+        i * increment + reverter,
+        (i + 1) * increment + reverter
+      );
+      ctx.stroke();
+    }
 
     // ctx.beginPath();
     // ctx.ellipse(150, 160, 25, 55, 0, 0, 2 * Math.PI);
@@ -68,7 +90,7 @@ class Visualisation extends Component {
           width={this.state.canvasSize}
           height={this.state.canvasSize}
           style={{
-            border: '1px solid #d3d3d3',
+            border: '3px solid #d3d3d3',
             borderRadius: this.state.canvasSize,
           }}
           ref="canvas"
