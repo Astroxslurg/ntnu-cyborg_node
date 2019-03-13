@@ -4,6 +4,8 @@ import dynamic from 'next/dynamic';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+import { Column, Row } from 'simple-flexbox';
+
 const onChange = () => true;
 const onClickItem = () => true;
 const onClickThumb = () => true;
@@ -44,10 +46,6 @@ const DynamicPlot = dynamic(import('../components/plot'), {
   ssr: false,
 });
 
-const Index = ({ state }) => (
-  <div>
-    <DynamicPlot />
-  </div>
-);
+const Index = ({ state }) => <div />;
 
 export default Index;

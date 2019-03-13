@@ -34,8 +34,22 @@ export default class MyApp extends App {
 
     return (
       <Container>
-          <NavbarTop/>
-          <Component state={this.state} {...pageProps} />
+        <Column flexGrow={1}>
+          <Row vertical="center">
+            <NavbarTop />
+          </Row>
+          <Row vertical="center">
+            <Column flexGrow={1} horizontal="center" />
+            <Column flexGrow={1} horizontal="center">
+              <DynamicPlot />
+            </Column>
+            <Column flexGrow={1} horizontal="center">
+              <span>Explanation of stuff </span>
+            </Column>
+            <Column flexGrow={1} horizontal="center" />
+          </Row>
+        </Column>
+        <Component state={this.state} {...pageProps} />
       </Container>
     );
   }
