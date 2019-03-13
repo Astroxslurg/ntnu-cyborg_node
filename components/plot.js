@@ -1,9 +1,7 @@
-
-
 import Plot from 'react-plotly.js';
 import Api from '../src/api-client';
 
-class Testtest extends React.Component {
+class Plot1 extends React.Component {
     constructor() {
       super();
       this.state = {
@@ -65,4 +63,4 @@ class Testtest extends React.Component {
    }
 }
 
-export default Testtest;
+export default Plot1;

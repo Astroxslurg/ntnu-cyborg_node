@@ -42,13 +42,12 @@ const MyCarousel = ({state}) => (
 )
 const DynamicPlot = dynamic(import('../components/plot'), {
     ssr: false
-})
+});
 
 const Index = ({ state }) => (
   <div>
    <DynamicPlot/>
   </div>
 );
-
 
 export default Index;
