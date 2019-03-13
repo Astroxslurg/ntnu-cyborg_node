@@ -42,25 +42,7 @@ export default class MyApp extends App {
         </Row>
         <Row vertical="center">
           <Column flexGrow={1} horizontal="center">
-            <h3> Column 1 </h3>
-            <span> column 1 content </span>
-          </Column>
-          <Column flexGrow={1} horizontal="center">
-            <h3> Column 2 </h3>
-            <span> column 2 content </span>
-          </Column>
-          <Column flexGrow={1} horizontal="center">
-            <h3> Column 1 </h3>
-            <span> column 1 content </span>
             <Component state={this.state} {...pageProps} />
-          </Column>
-          <Column flexGrow={1} horizontal="center">
-            <h3> Column 2 </h3>
-            <span> column 2 content </span>
-          </Column>
-          <Column flexGrow={1} horizontal="center">
-            <h3> Column 2 </h3>
-            <span> column 2 content </span>
           </Column>
         </Row>
       </Container>

@@ -49,9 +49,7 @@ const DynamicPlot = dynamic(import('../components/plot'), {
 const Index = ({ state }) => (
   <div>
     <Row vertical="center">
-      <Column flexGrow={1} horizontal="center" color="blue">
-        <p>hei</p>
-      </Column>
+      <Column flexGrow={1} horizontal="center" color="blue" />
       <Column flexGrow={1} horizontal="center">
         <DynamicPlot />
       </Column>
