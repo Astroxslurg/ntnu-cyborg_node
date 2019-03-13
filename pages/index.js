@@ -8,12 +8,7 @@ const onChange = () => true;
 const onClickItem = () => true;
 const onClickThumb = () => true;
 
-const DynamicPlot = dynamic(import('../components/plot'), {
-    ssr: false
-})
-
-const Index = ({ state }) => (
-    <div>
+const MyCarousel = ({state}) => (
     <Carousel
       showArrows={true}
       //emulateTouch
@@ -44,6 +39,14 @@ const Index = ({ state }) => (
         <p className="legend">an iframe to /apitest</p>
       </div>
     </Carousel>
+)
+const DynamicPlot = dynamic(import('../components/plot'), {
+    ssr: false
+})
+
+const Index = ({ state }) => (
+  <div>
+   <DynamicPlot/>
   </div>
 );
 
