@@ -35,10 +35,17 @@ export default class MyApp extends App {
 
     return (
       <Container>
-        <Row horizontal="center">
-          <Column flexGrow={1}>
+        <Row
+          horizontal="center"
+          style={{
+            backgroundColor: '#343a40',
+          }}>
+          <Column flexGrow={1} horizontal="center" />
+          <Column flexGrow={1} horizontal="center">
             <NavbarTop />
           </Column>
+          <Column flexGrow={1} />
+          <Column flexGrow={1} />
         </Row>
         <Row vertical="center">
           <Column flexGrow={1} horizontal="center">
