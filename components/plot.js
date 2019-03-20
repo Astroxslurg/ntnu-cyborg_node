@@ -27,7 +27,8 @@ class Plot1 extends React.Component {
             x: this.state.sensordata.timestampList,
             type: 'scatter',
             mode: 'lines+points',
-            marker: { color: 'blue' },
+            bordercolor: 'red',
+            marker: { color: 'green' },
           },
           { type: 'scatter' },
         ]}
