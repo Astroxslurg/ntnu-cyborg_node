@@ -35,23 +35,18 @@ export default class MyApp extends App {
 
     return (
       <Container>
-        <Row
-          horizontal="center"
+        <div
+          className="row"
           style={{
             backgroundColor: '#343a40',
           }}>
-          <Column flexGrow={1} horizontal="center" />
-          <Column flexGrow={1} horizontal="center">
+          <div className="col-md-3" style={{}} />
+          <div className="col-md-6">
             <NavbarTop />
-          </Column>
-          <Column flexGrow={1} />
-          <Column flexGrow={1} />
-        </Row>
-        <Row vertical="center">
-          <Column flexGrow={1} horizontal="center">
-            <Component state={this.state} {...pageProps} />
-          </Column>
-        </Row>
+          </div>
+          <div className="col-md-3" style={{}} />
+        </div>
+        <Component state={this.state} {...pageProps} />
       </Container>
     );
   }

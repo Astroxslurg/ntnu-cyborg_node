@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import dynamic from 'next/dynamic';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import '../src/styles/default.css';
 
 import { Column, Row } from 'simple-flexbox';
 
@@ -46,18 +47,42 @@ const DynamicPlot = dynamic(import('../components/plot'), {
   ssr: false,
 });
 
+const ContentRow = ({ state }) => (
+  <div
+    className="row"
+    style={{
+      backgroundColor: 'white',
+    }}>
+    <div
+      className="col-md-3"
+      style={{
+        backgroundColor: 'white',
+      }}
+    />
+
+    <div className="col-md-3">
+      <DynamicPlot />
+    </div>
+
+    <div className="col-md-3">
+      <div className="columnTest">
+        Here we can see a plot of one of the 60 electrodes on the
+        nervecellsboards (mea?) ffjdlasjfkldjaflkdj afjldksajflødakfjdølafkjda{' '}
+      </div>
+    </div>
+
+    <div
+      className="col-md-3"
+      style={{
+        backgroundColor: 'white',
+      }}
+    />
+  </div>
+);
+
 const Index = ({ state }) => (
   <div>
-    <Row vertical="center">
-      <Column flexGrow={1} horizontal="center" color="blue" />
-      <Column flexGrow={1} horizontal="center">
-        <DynamicPlot />
-      </Column>
-      <Column flexGrow={1} horizontal="center" color="green">
-        <span> Explanation</span>
-      </Column>
-      <Column flexGrow={1} horizontal="center" />
-    </Row>
+    <ContentRow />
   </div>
 );
 
