@@ -46,7 +46,29 @@ export default class MyApp extends App {
           </div>
           <div className="col-md-3" style={{}} />
         </div>
-        <Component state={this.state} {...pageProps} />
+
+        <div
+          className="row"
+          style={{
+            backgroundColor: 'white',
+          }}>
+          <div
+            className="col-md-3"
+            style={{
+              backgroundColor: 'white',
+            }}
+          />
+          <div className="col-md-6">
+            <Component state={this.state} {...pageProps} />
+          </div>
+
+          <div
+            className="col-md-3"
+            style={{
+              backgroundColor: 'white',
+            }}
+          />
+        </div>
       </Container>
     );
   }

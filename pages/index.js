@@ -48,35 +48,14 @@ const DynamicPlot = dynamic(import('../components/plot'), {
 });
 
 const ContentRow = ({ state }) => (
-  <div
-    className="row"
-    style={{
-      backgroundColor: 'white',
-    }}>
-    <div
-      className="col-md-3"
-      style={{
-        backgroundColor: 'white',
-      }}
-    />
-
-    <div className="col-md-3">
+  <div className="row">
+    <div className="col-md-6">
       <DynamicPlot />
     </div>
-
-    <div className="col-md-3">
-      <div className="columnTest">
-        Here we can see a plot of one of the 60 electrodes on the
-        nervecellsboards (mea?) ffjdlasjfkldjaflkdj afjldksajflødakfjdølafkjda{' '}
-      </div>
+    <div className="col-md-6">
+      Here we can see a plot of one of the 60 electrodes on the nervecellsboards
+      (mea?) ffjdlasjfkldjaflkdj afjldksajflødakfjdølafkjda{' '}
     </div>
-
-    <div
-      className="col-md-3"
-      style={{
-        backgroundColor: 'white',
-      }}
-    />
   </div>
 );
 

@@ -6,7 +6,7 @@ class About extends Component {
       <div>
         <h1
           style={{
-            backgroundColor: 'blue',
+            backgroundColor: 'white',
           }}>
           About
         </h1>

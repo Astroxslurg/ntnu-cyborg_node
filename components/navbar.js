@@ -6,7 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const NavbarTop = ({ state }) => (
   <div>
     <Navbar bg="dark" variant="dark" expand="lg">
-      <Navbar.Brand href="index">K³AH</Navbar.Brand>
+      <Navbar.Brand>
+        <a href="index">
+          <img className="image" src="static/EiT_Logo.png" />
+        </a>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
