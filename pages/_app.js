@@ -40,11 +40,11 @@ export default class MyApp extends App {
           style={{
             backgroundColor: '#343a40',
           }}>
-          <div className="col-md-3" style={{}} />
-          <div className="col-md-6">
+          <div className="col-md-2" style={{}} />
+          <div className="col-md-8">
             <NavbarTop />
           </div>
-          <div className="col-md-3" style={{}} />
+          <div className="col-md-2" style={{}} />
         </div>
 
         <div
@@ -53,17 +53,17 @@ export default class MyApp extends App {
             backgroundColor: 'white',
           }}>
           <div
-            className="col-md-3"
+            className="col-md-2"
             style={{
               backgroundColor: 'white',
             }}
           />
-          <div className="col-md-6">
+          <div className="col-md-8" style={{ backgroundColor: '#888888' }}>
             <Component state={this.state} {...pageProps} />
           </div>
 
           <div
-            className="col-md-3"
+            className="col-md-2"
             style={{
               backgroundColor: 'white',
             }}
