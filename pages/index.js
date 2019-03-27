@@ -11,19 +11,22 @@ const DynamicPlot = dynamic(import('../components/plot'), {
 
 const ContentRow = ({ state }) => (
   <div>
-    <div className="row mt-1">
-      <div className="col-9">
-        <DynamicPlot />
+    <div className="row mt-1 mb-4">
+      <div className="col-6">
+        <CircleVisualisation className="dynPlot" />
       </div>
-      <div className="col-3">
-        Here we can see a plot of one of the 60 electrodes on the MEA.
+      <div className="col-6 mt-5">
+        <h1>Circle Plot</h1>
+        <p>Kristian pls explain</p>
       </div>
     </div>
     <div className="row">
-      <div className="col-3 ">
-        <p>Another plot!</p>
+      <div className="col-4 mt-5">
+        <h1>A Timeseries</h1>
+        <p>Kristian pls explain</p>
+        <p>Here we can see a plot of one of the 60 electrodes on the MEA.</p>
       </div>
-      <div className="col-9">
+      <div className="col-8">
         <DynamicPlot />
       </div>
     </div>
@@ -33,14 +36,6 @@ const ContentRow = ({ state }) => (
 
 const Index = ({ state }) => (
   <div>
-    <h1>Welcome</h1>
-    <p>This is text</p>
-    <DynamicPlot />
-    <p>This is plot</p>
-
-    <h2>This is a header written hekk yeh</h2>
-    <a href="testtest">testtest</a>
-    <CircleVisualisation />
     <ContentRow />
   </div>
 );
