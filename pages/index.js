@@ -11,15 +11,18 @@ const DynamicPlot = dynamic(import('../components/plot'), {
 const ContentRow = ({ state }) => (
   <div>
     <div className="row mt-1 mb-4">
-      <div className="col-8">
+      <div className="col-6">
         <CircleVisualisation className="dynPlot" />
       </div>
-      <div className="col-4 mt-5">
+      <div className="col-6 mt-5">
+        <h1>Circle Plot</h1>
         <p>Kristian pls explain</p>
       </div>
     </div>
     <div className="row">
       <div className="col-4 mt-5">
+        <h1>A Timeseries</h1>
+        <p>Kristian pls explain</p>
         <p>Here we can see a plot of one of the 60 electrodes on the MEA.</p>
       </div>
       <div className="col-8">

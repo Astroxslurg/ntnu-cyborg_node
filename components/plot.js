@@ -35,7 +35,6 @@ class Plot1 extends React.Component {
         layout={{
           autosize: true,
           responsive: true,
-          title: 'A Fancy Plot',
           //width: 850,
           //height: '100%',
           margin: {
