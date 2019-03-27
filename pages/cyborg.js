@@ -9,6 +9,7 @@ class Cyborg extends Component {
             <img className="img-responsive" src="../static/robot.png" />
           </div>
           <div className="col-md-4  ">
+            <h1 style={{ color: '#00509e' }}>Cyborg</h1>
             <p>
               NTNU Cyborg is a collaboration between the Department of
               Engineering Cybernetics (ITK), the Department of Computer Science
@@ -19,16 +20,16 @@ class Cyborg extends Component {
             <p>
               NTNU Cyborg is a project to develop a Cyborg (a cybernetic
               organism). The aim in this project is to enable communication
-              between living nerve tissue and a robot. The s ocial and
+              between living nerve tissue and a robot. The social and
               interactive Cyborg serves as a platform for studying neural
-              signaling properties, roboti cs and hybrid bio-robotic machines.
+              signaling properties, robotics and hybrid bio-robotic machines.
               The project aims to bring NTNU to the forefront of international
               research within these areas, while creating a platform for
               interdisciplinary collaborations and teaching.
             </p>
             <p>
-              Biomedical aspects of the project includes understand ing
-              signalling between nerve cells, learning and plasti city,
+              Biomedical aspects of the project includes understanding
+              signalling between nerve cells, learning and plasticity,
               structuring and self organising biological networks, research on
               progression on diseases and rehabilitation.
             </p>

@@ -36,7 +36,7 @@ export default class MyApp extends App {
     return (
       <Container>
         <div
-          className="row"
+          className="row navbarMaster"
           style={{
             backgroundColor: '#343a40',
           }}>

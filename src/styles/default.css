@@ -1,6 +1,4 @@
-.columnTest {
-    flex-basis: 100%;
-}
+
 .navbar-brand {
     display: flex;
     align-items: center;
@@ -21,6 +19,14 @@
     width: 100%;
 }
 
-.dynPlot{
+dynPlot{
     width: 300px !important;
+}
+
+h1 {
+    color: #00509e !important;
+}
+
+navbarMaster {
+    height: 75px !important;
 }
