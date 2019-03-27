@@ -1,6 +1,8 @@
-.columnTest {
-    flex-basis: 100%;
+/* To remove the horisontal navbar */
+body{
+    overflow-x:hidden;
 }
+
 .navbar-brand {
     display: flex;
     align-items: center;
@@ -9,18 +11,30 @@
     padding: 7px 14px;
 }
 
-/*To keep logo at correct size */
+/* To keep logo at correct size */
 .image {
     flex: 1;
     width: 60px;
     height: 60px;
     resizeMode: 'contain'
 }
-/*To keep picture of ourselves same size*/
+/* To keep picture of ourselves same size */
 .img-responsive {
     width: 100%;
 }
 
-.dynPlot{
+dynPlot{
     width: 300px !important;
+}
+
+h1 {
+    color: #00509e !important;
+}
+
+h3 {
+    color: #f58025 !important;
+}
+
+navbarMaster {
+    height: 75px !important;
 }

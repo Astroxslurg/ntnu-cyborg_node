@@ -9,12 +9,17 @@ class About extends Component {
             <img className="img-responsive" src="../static/EiT_Oss.jpg" />
           </div>
           <div className="col-md-4  ">
+            <h1>About</h1>
             <p>
               This website is the project of group 4 in the NTNU Cyborg village
               in the course EiT. Eit is a subject in NTNU that focuses on
               teamwork and develop the students skills in area. You can read
               more about EiT
-              <a href="https://www.ntnu.edu/eit"> here</a>.
+              <a href="https://www.ntnu.edu/eit" target="_blank">
+                {' '}
+                here
+              </a>
+              .
             </p>
 
             <p>
