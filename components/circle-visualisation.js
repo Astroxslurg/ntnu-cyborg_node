@@ -1,39 +1,10 @@
 import React, { Component } from 'react';
 import Api from '../src/api-client';
-
-const getGradient = value => {
-  if (value < 0) {
-    console.log(`Error: getGradient got negative value`);
-    return '#000000';
-  }
-  const modVal = value % 768;
-  let r, g, b;
-  if (modVal < 256) {
-    r = 255 - modVal;
-    g = modVal;
-    b = 0;
-  } else if (modVal < 512) {
-    r = 0;
-    g = 256 - (modVal % 256);
-    b = modVal % 256;
-  } else {
-    r = modVal % 256;
-    g = 0;
-    b = 256 - (modVal % 256);
-  }
-  return String.prototype.concat(
-    '#',
-    r.toString(16).padStart(2, '0'),
-    g.toString(16).padStart(2, '0'),
-    b.toString(16).padStart(2, '0'),
-  );
-};
+import { getGradient } from '../src/helpers';
 
 const draw = (arr, index, gradientValue, ctx, multiplier) => {
   const strokeString = getGradient(gradientValue);
   ctx.strokeStyle = strokeString;
-  // console.log(`gradientValue: ${gradientValue}, strokeString: ${strokeString}`);
-  // console.log(`val: ${arr[index]}`);
   const reverter = arr[index] < 0 ? Math.PI : 0;
   ctx.beginPath();
   ctx.arc(
@@ -46,18 +17,16 @@ const draw = (arr, index, gradientValue, ctx, multiplier) => {
   ctx.stroke();
 };
 
-class Visualisation extends Component {
+class CircleVisualisation extends Component {
   constructor() {
     super();
     this.state = {
-      sensordata: { yolo: 'yolo' },
+      sensordata: {},
       canvasSize: 500,
     };
   }
 
   async componentDidMount() {
-    // const result = await Api.fetchNodesForTimeInterval([12, 21], 0, 1000);
-    console.log(result);
     const result = await Api.fetchSensorData();
     this.setState({ sensordata: result });
 
@@ -84,7 +53,6 @@ class Visualisation extends Component {
     const endRadius = 120;
 
     ctx.lineWidth = 6;
-    ctx.lineCap = 'round';
 
     let seq = -seqOfSameColor;
     let gradientValue = 0;
@@ -115,4 +83,4 @@ class Visualisation extends Component {
   }
 }
 
-export default Visualisation;
+export default CircleVisualisation;
