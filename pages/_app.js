@@ -2,6 +2,7 @@ import React from 'react';
 import App, { Container } from 'next/app';
 import Api from '../src/api-client';
 import NavbarTop from '../components/navbar';
+import { Column, Row } from 'simple-flexbox';
 
 export default class MyApp extends App {
   constructor() {
@@ -34,8 +35,40 @@ export default class MyApp extends App {
 
     return (
       <Container>
-          <NavbarTop/>
-          <Component state={this.state} {...pageProps} />
+        <div
+          className="row"
+          style={{
+            backgroundColor: '#343a40',
+          }}>
+          <div className="col-md-2" style={{}} />
+          <div className="col-md-8">
+            <NavbarTop />
+          </div>
+          <div className="col-md-2" style={{}} />
+        </div>
+
+        <div
+          className="row"
+          style={{
+            backgroundColor: 'white',
+          }}>
+          <div
+            className="col-md-2"
+            style={{
+              backgroundColor: 'white',
+            }}
+          />
+          <div className="col-md-8" style={{ backgroundColor: 'blue' }}>
+            <Component state={this.state} {...pageProps} />
+          </div>
+
+          <div
+            className="col-md-2"
+            style={{
+              backgroundColor: 'white',
+            }}
+          />
+        </div>
       </Container>
     );
   }
