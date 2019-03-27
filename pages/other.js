@@ -5,11 +5,14 @@ class Other extends Component {
     return (
       <div className="container-fluid">
         <div className="row mt-5 mb-4">
-          <div className="col-md-8">
+          <h1>Other Projects</h1>
+        </div>
+        <div className="row mt-2 mb-2">
+          <div className="col-md-6">
             <img className="img-responsive" src="../static/SiNRI_logo.png" />
           </div>
-          <div className="col-md-4">
-            <h1>Simple Neural Response Interpreter - SiNRI</h1>
+          <div className="col-md-6">
+            <h3>GR1: Simple Neural Response Interpreter - SiNRI</h3>
             <p>
               This project entails working towards creating a minimalistic
               system that interfaces with the in-vitro neural chamber to
@@ -21,8 +24,8 @@ class Other extends Component {
           </div>
         </div>
         <div className="row mt-5 mb-4">
-          <div className="col-md-4">
-            <h1>Core Reservoir Experiment Python Example - CREPE</h1>
+          <div className="col-md-6">
+            <h3>GR2: Core Reservoir Experiment Python Example - CREPE</h3>
             <p>
               We are attempting to create a framework for connecting sensor
               systems to Cyborg’s biological neural network. We call this CREPE.
@@ -35,7 +38,7 @@ class Other extends Component {
               experiment that will play rock-paper-scissors using a IR camera.
             </p>
           </div>
-          <div className="col-md-8">
+          <div className="col-md-6">
             <img className="img-responsive" src="../static/SiNRI_logo.png" />
           </div>
         </div>
