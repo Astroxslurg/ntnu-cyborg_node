@@ -50,19 +50,19 @@ const DynamicPlot = dynamic(import('../components/plot'), {
 const ContentRow = ({ state }) => (
   <div>
     <div className="row">
-      <div className="col-md-7">
+      <div className="col-md-8" className="dynPlot">
         <DynamicPlot />
       </div>
-      <div className="col-md-5">
+      <div className="col-md-4 mt-5 ml-5">
         Here we can see a plot of one of the 60 electrodes on the
         nervecellsboards (mea?) ffjdlasjfkldjaflkdj afjldksajflødakfjdølafkjda{' '}
       </div>
     </div>
     <div className="row">
-      <div className="col-md-5">
+      <div className="col-md-4 mt-5 ml-5">
         <p>hei</p>
       </div>
-      <div className="col-md-7">
+      <div className="col-md-8">
         <DynamicPlot />
       </div>
     </div>

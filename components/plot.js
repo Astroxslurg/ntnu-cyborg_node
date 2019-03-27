@@ -33,6 +33,7 @@ class Plot1 extends React.Component {
           { type: 'scatter' },
         ]}
         layout={{
+          autosize: true,
           title: 'A Fancy Plot',
           xaxis: {
             title: {

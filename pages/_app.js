@@ -58,7 +58,7 @@ export default class MyApp extends App {
               backgroundColor: 'white',
             }}
           />
-          <div className="col-md-8" style={{ backgroundColor: '#888888' }}>
+          <div className="col-md-8" style={{ backgroundColor: 'blue' }}>
             <Component state={this.state} {...pageProps} />
           </div>
 
