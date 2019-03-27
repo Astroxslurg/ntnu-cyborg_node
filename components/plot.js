@@ -38,6 +38,9 @@ class Plot1 extends React.Component {
           title: 'A Fancy Plot',
           //width: 850,
           //height: '100%',
+          margin: {
+            r: 0,
+          },
           xaxis: {
             title: {
               text: this.state.sensordata.tUnit,
