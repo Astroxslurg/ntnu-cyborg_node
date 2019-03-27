@@ -28,7 +28,7 @@ class Plot1 extends React.Component {
             type: 'scatter',
             mode: 'lines+points',
             bordercolor: 'red',
-            marker: { color: 'green' },
+            marker: { color: '#f58025' },
           },
           { type: 'scatter' },
         ]}

@@ -4,11 +4,11 @@ class About extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="row mt-4">
+        <div className="row mt-5 mb-4">
           <div className="col-md-8">
             <img className="img-responsive" src="../static/EiT_Oss.jpg" />
           </div>
-          <div className="col-md-4 mt-4">
+          <div className="col-md-4  ">
             <p>
               This website is the project of group 4 in the NTNU Cyborg village
               in the course EiT. Eit is a subject in NTNU that focuses on
@@ -27,17 +27,11 @@ class About extends Component {
             <p>
               Our group is composed of five people (from left to right): Karen,
               Kim , Kristian, Herman and Abdurahim. As a result, we decided to
-              have the group n ame K3AH. We’re from different specialisations -
-              two people are from Computer Science, one is from Informatics and
-              two are from Cybernetics and Robotics.
+              have the group n ame K<sup>3</sup>AH. We’re from different
+              specialisations - two people are from Computer Science, one is
+              from Informatics and two are from Cybernetics and Robotics.
             </p>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-md-4">
-            <p>hei</p>
-          </div>
-          <div className="col-md-8" />
         </div>
       </div>
     );
