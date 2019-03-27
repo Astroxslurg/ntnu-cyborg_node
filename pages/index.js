@@ -2,11 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import dynamic from 'next/dynamic';
 import CircleVisualisation from '../components/circle-visualisation';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../src/styles/default.css';
-
-import { Column, Row } from 'simple-flexbox';
 
 const DynamicPlot = dynamic(import('../components/plot'), {
   ssr: false,
