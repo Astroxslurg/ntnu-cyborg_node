@@ -22,7 +22,7 @@ class Other extends Component {
         </div>
         <div className="row mt-5 mb-4">
           <div className="col-md-4">
-            <h1>Core Reservoir Experiment Python - CREPE</h1>
+            <h1>Core Reservoir Experiment Python Example - CREPE</h1>
             <p>
               We are attempting to create a framework for connecting sensor
               systems to Cyborg’s biological neural network. We call this CREPE.
