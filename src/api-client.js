@@ -4,9 +4,17 @@ const baseUrl = process.env.BASE_URL || 'http://localhost:8080';
 
 if (!baseUrl) {
   console.log(
-    'No base URL found\nPlease set the BASE_URL environment variable'
+    'No base URL found\nPlease set the BASE_URL environment variable',
   );
 }
+
+const getNodeString = nodes => {
+  let nodeString = nodes[0].toString();
+  for (let i = 1; i < nodes.length; i++) {
+    nodeString = nodeString.concat('-', nodes[i].toString());
+  }
+  return nodeString;
+};
 
 class Api {
   // Hello world request
@@ -16,6 +24,17 @@ class Api {
 
   async fetchSensorData(callback) {
     return await this.fetchJson(`${baseUrl}/sensordata`);
+  }
+
+  async fetchNodesForTimeInterval(nodes, startTime, endTime) {
+    const str = `${baseUrl}/getData?nodeList=${getNodeString(
+      nodes,
+    )}&startTime=${startTime}&endTime=${endTime}`;
+    return await this.fetchJson(str);
+  }
+
+  async fetchAllData(callback) {
+    return await this.fetchJson(`${baseUrl}/getData`);
   }
 
   async fetchJson(path) {
@@ -30,7 +49,7 @@ class Api {
     }
 
     const err = new Error(
-      `unable to fetch ${path}. ${result.status} ${result.statusText}`
+      `unable to fetch ${path}. ${result.status} ${result.statusText}`,
     );
     throw err;
   }
