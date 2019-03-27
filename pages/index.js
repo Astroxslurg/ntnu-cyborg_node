@@ -1,52 +1,22 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import dynamic from 'next/dynamic';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Visualisation from '../components/visualisation';
 
-const onChange = () => true;
-const onClickItem = () => true;
-const onClickThumb = () => true;
-
-const MyCarousel = ({ state }) => (
-  <Carousel
-    showArrows={true}
-    //emulateTouch
-    //width="400"
-    onChange={onChange}
-    //centerMode={true}
-    intiniteLoop={true}
-    onClickThumb={onClickThumb}
-    onClickItem={onClickItem}>
-    >
-    <div>
-      <DynamicPlot />
-      <p className="legend">yoyo</p>
-    </div>
-    <div>
-      <img src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" />
-      <p className="legend">sup?</p>
-    </div>
-    <div>
-      <div
-        style={{
-          display: 'inline-block',
-          pointerEvents: 'none',
-          backgroundColor: '#ff0044',
-        }}>
-        <iframe src="/apitest" />
-      </div>
-      <p className="legend">an iframe to /apitest</p>
-    </div>
-  </Carousel>
-);
 const DynamicPlot = dynamic(import('../components/plot'), {
   ssr: false,
 });
 
 const Index = ({ state }) => (
   <div>
+    <h1>Welcome</h1>
+    <p>This is text</p>
     <DynamicPlot />
+    <p>This is plot</p>
+
+    <h2>This is a header written hekk yeh</h2>
+    <a href="testtest">testtest</a>
+    <Visualisation />
   </div>
 );
 
