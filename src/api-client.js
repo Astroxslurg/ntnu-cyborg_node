@@ -25,15 +25,20 @@ class Api {
     return await this.fetchJson(`${baseUrl}/sensordata`);
   }
 
-  async fetchSensorData(callback) {
-    return await this.fetchJson(`${baseUrl}/sensordata`);
+  async fetchNodesForTimeInterval(nodes, startTime, endTime) {
+    let str = '';
+    if (nodes !== 'all') {
+      str = `${baseUrl}/getData?nodeList=${getNodeString(
+        nodes,
+      )}&startTime=${startTime}&endTime=${endTime}`;
+    } else {
+      str = `${baseUrl}/getData?nodeList=all&startTime=${startTime}&endTime=${endTime}`;
+    }
+    return await this.fetchJson(str);
   }
 
-  async fetchNodesForTimeInterval(nodes, startTime, endTime) {
-    const str = `${baseUrl}/getData?nodeList=${getNodeString(
-      nodes,
-    )}&startTime=${startTime}&endTime=${endTime}`;
-    return await this.fetchJson(str);
+  async fetchNodes() {
+    return await this.fetchJson(`${baseUrl}/nodes`);
   }
 
   async fetchAllData(callback) {

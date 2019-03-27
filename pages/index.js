@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import dynamic from 'next/dynamic';
 import CircleVisualisation from '../components/circle-visualisation';
 import '../src/styles/default.css';
+import MartiniusPlot from '../components/martiniusPlot';
 
 const DynamicPlot = dynamic(import('../components/plot'), {
   ssr: false,
@@ -26,6 +27,7 @@ const ContentRow = ({ state }) => (
         <DynamicPlot />
       </div>
     </div>
+    <MartiniusPlot />
   </div>
 );
 
