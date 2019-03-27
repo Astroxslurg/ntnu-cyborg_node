@@ -12,16 +12,15 @@
 /*To keep logo at correct size */
 .image {
     flex: 1;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     resizeMode: 'contain'
 }
 /*To keep picture of ourselves same size*/
 .img-responsive {
-
     width: 100%;
-    height: 100%;
 }
 
 .dynPlot{
+    width: 300px !important;
 }

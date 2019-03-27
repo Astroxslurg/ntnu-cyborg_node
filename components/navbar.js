@@ -8,7 +8,7 @@ const NavbarTop = ({ state }) => (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Navbar.Brand>
         <a href="index">
-          <img className="image" src="static/EiT_Logo.png" />
+          <img className="image" src="static/EiT_Logo2.png" />
         </a>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

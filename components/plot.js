@@ -28,13 +28,16 @@ class Plot1 extends React.Component {
             type: 'scatter',
             mode: 'lines+points',
             bordercolor: 'red',
-            marker: { color: 'green' },
+            marker: { color: '#f58025' },
           },
           { type: 'scatter' },
         ]}
         layout={{
           autosize: true,
+          responsive: true,
           title: 'A Fancy Plot',
+          //width: 850,
+          //height: '100%',
           xaxis: {
             title: {
               text: this.state.sensordata.tUnit,
