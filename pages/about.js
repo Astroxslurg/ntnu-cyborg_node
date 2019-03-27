@@ -15,7 +15,11 @@ class About extends Component {
               in the course EiT. Eit is a subject in NTNU that focuses on
               teamwork and develop the students skills in area. You can read
               more about EiT
-              <a href="https://www.ntnu.edu/eit"> here</a>.
+              <a href="https://www.ntnu.edu/eit" target="_blank">
+                {' '}
+                here
+              </a>
+              .
             </p>
 
             <p>

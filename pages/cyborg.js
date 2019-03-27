@@ -11,10 +11,12 @@ class Cyborg extends Component {
           <div className="col-md-4  ">
             <h1 style={{ color: '#00509e' }}>Cyborg</h1>
             <p>
-              NTNU Cyborg is a collaboration between the Department of
-              Engineering Cybernetics (ITK), the Department of Computer Science
-              (IDI) and the Department of Neuromedicine and Movement Science
-              (INB).
+              <a href="https://www.ntnu.edu/cyborg" target="_blank">
+                NTNU Cyborg
+              </a>{' '}
+              is a collaboration between the Department of Engineering
+              Cybernetics (ITK), the Department of Computer Science (IDI) and
+              the Department of Neuromedicine and Movement Science (INB).
             </p>
 
             <p>
@@ -32,10 +34,6 @@ class Cyborg extends Component {
               signalling between nerve cells, learning and plasticity,
               structuring and self organising biological networks, research on
               progression on diseases and rehabilitation.
-            </p>
-            <p>
-              For more information about Cyborg, click{' '}
-              <a href="https://www.ntnu.edu/cyborg"> here</a>.
             </p>
           </div>
         </div>
