@@ -52,22 +52,12 @@ export default class MyApp extends App {
           style={{
             backgroundColor: 'white',
           }}>
-          <div
-            className="col-md-2"
-            style={{
-              backgroundColor: 'white',
-            }}
-          />
-          <div className="col-md-8" style={{ backgroundColor: 'blue' }}>
+          <div className="col-2" />
+          <div className="col-8" style={{ backgroundColor: '#666444' }}>
             <Component state={this.state} {...pageProps} />
           </div>
 
-          <div
-            className="col-md-2"
-            style={{
-              backgroundColor: 'white',
-            }}
-          />
+          <div className="col-2" />
         </div>
       </Container>
     );

@@ -18,10 +18,10 @@
 }
 /*To keep picture of ourselves same size*/
 .img-responsive {
-
     width: 100%;
     height: 100%;
 }
 
 .dynPlot{
+    width: 300px !important;
 }
