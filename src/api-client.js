@@ -42,6 +42,10 @@ class Api {
     return await this.fetchJson(`${baseUrl}/getData`);
   }
 
+  async fetchSensorData(callback) {
+    return await this.fetchJson(`${baseUrl}/getData`);
+  }
+
   async fetchJson(path) {
     const result = await fetch(path, {
       method: 'GET',

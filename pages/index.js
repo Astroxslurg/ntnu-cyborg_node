@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import dynamic from 'next/dynamic';
-import CircleVisualisation from '../components/circle-visualisation';
+import Visualisation from '../components/visualisation';
 import '../src/styles/default.css';
 import MartiniusPlot from '../components/martiniusPlot';
 
@@ -13,7 +13,7 @@ const ContentRow = ({ state }) => (
   <div>
     <div className="row mt-1 mb-4">
       <div className="col-6">
-        <CircleVisualisation className="dynPlot" />
+        <Visualisation className="dynPlot" />
       </div>
       <div className="col-6 mt-5">
         <h1>Circle Plot</h1>
