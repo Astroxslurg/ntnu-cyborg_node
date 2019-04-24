@@ -59,7 +59,7 @@ class Visualisation extends Component {
   constructor() {
     super();
     this.state = {
-      sensordata: { yolo: 'yolo' },
+      sensordata: { yolo: '' },
       canvasSize: 500,
     };
   }
