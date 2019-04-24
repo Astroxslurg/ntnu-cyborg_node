@@ -25,8 +25,8 @@ const ContentRow = ({ state }) => (
         <h1>Timeseries Representation</h1>
         <p>
           Here we see a plot of one of the 60 electrodes on the MEA. Along the
-          y-axis we see the measured voltage on the electrode in pico volts and
-          along the x-axis we see the time passed in milliseconds.
+          y-axis we see the measured voltage on the electrode in pico-volts and
+          along the x-axis we see the time passed in milli-seconds.
         </p>
       </div>
       <div className="col-8">
