@@ -9,7 +9,7 @@ class Other extends Component {
         </div>
         <div className="row mt-2 mb-2">
           <div className="col-md-6">
-            <img className="img-responsive" src="../static/SiNRI_logo.png" />
+            <img className="img-responsive" src="../static/grp1.png" />
           </div>
           <div className="col-md-6">
             <h3>GR1: Simple Neural Response Interpreter - SiNRI</h3>
@@ -39,7 +39,25 @@ class Other extends Component {
             </p>
           </div>
           <div className="col-md-6">
-            <img className="img-responsive" src="../static/SiNRI_logo.png" />
+            <img className="img-responsive" src="../static/grp2.jpg" />
+          </div>
+        </div>
+        <div className="row mt-5 mb-4">
+          <div className="col-md-6">
+            <img className="img-responsive" src="../static/grp3.jpg" />
+          </div>
+          <div className="col-md-6">
+            <h3>GR3: Completing the Robot Body</h3>
+            <p>
+              Group 3's main task has been to finish the robot's exterior body.
+              Throughout the project, we've had the opportunity to work with the
+              design and manufacturing of new parts, modification of existing
+              hardware, and the procurement of missing components. The project
+              culminated in an extensive paint job with the main goal of making
+              the cyborg presentable by the end of the semester. We aspire to
+              produce a robot with satisfactory functionality and design that
+              can promote the NTNU Cyborg while driving around the EL-building.
+            </p>
           </div>
         </div>
       </div>
