@@ -17,7 +17,12 @@ const ContentRow = ({ state }) => (
       </div>
       <div className="col-6 mt-5">
         <h1>Circle Plot</h1>
-        <p>Kristian pls explain</p>
+        <p>
+          This plot shows all the available datapoints as colored dots inside a
+          circle. Each angular segment represents one sensor, the color
+          represents the sample timestamp, and the distance from the center to
+          dot represents its absolute value.
+        </p>
       </div>
     </div>
     <div className="row">

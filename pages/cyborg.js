@@ -9,7 +9,7 @@ class Cyborg extends Component {
             <img className="img-responsive" src="../static/robot.png" />
           </div>
           <div className="col-md-4  ">
-            <h1 style={{ color: '#00509e' }}>Cyborg</h1>
+            <h1 style={{ color: '#00509e' }}>NTNU Cyborg</h1>
             <p>
               <a href="https://www.ntnu.edu/cyborg" target="_blank">
                 NTNU Cyborg
