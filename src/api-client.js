@@ -1,5 +1,5 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-const baseUrl = process.env.BASE_URL || 'http://40.113.8.214:8080';
+const baseUrl = process.env.BASE_URL || 'http://localhost:8080'; //http://40.113.8.214:8080';
 import fetch from 'isomorphic-fetch';
 
 if (!baseUrl) {
@@ -43,7 +43,7 @@ class Api {
   }
 
   async fetchSensorData(callback) {
-    return await this.fetchJson(`${baseUrl}/getData`);
+    return await this.fetchJson(`${baseUrl}/sensordata`);
   }
 
   async fetchJson(path) {
