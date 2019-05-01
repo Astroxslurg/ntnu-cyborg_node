@@ -5,10 +5,22 @@ The project is based on [Next.js](https://nextjs.org/ 'A Node-based React framew
 
 ## Installing
 
-To run this project you need to have Node (and Yarn) installed on your system.
-Clone the project and cd into it.
+To run this project you need to have [Node](https://nodejs.org) (and [Yarn](https://yarnpkg.com/en/docs/install)) installed on your system.
 
-Start by installing packages:
+To install Node and Yarn on a Debian/Ubuntu system, become root and type:
+
+```
+apt-get install apt-transport-https
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
+apt-get install -y nodejs
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+```
+
+When Node and Yarn is installed, clone the project and cd into it.
+
+To install the needed packages for the project, simply type:
 
 ```
 yarn
@@ -40,6 +52,10 @@ This will create a static build in .next/, which can be run with:
 ```
 yarn start
 ```
+
+The server will then run on port 3000.
+
+Change the environemnt variable PORT to run it on a different port
 
 ## The Backend
 
